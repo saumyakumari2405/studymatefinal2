@@ -1,0 +1,76 @@
+
+body {
+  background-color: #E8ECEF;
+  background: #96ceb4;
+}
+
+.centered {
+    padding-top: 100px;
+    text-align: center;
+    background: #96ceb4;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}
+/* My own modification */
+.tryingownstyle-space {
+  padding-top: 20px;
+}
+
+.tryingownstyle-space2 {
+  padding-top: 60px;
+}
+
+.ownstyle {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  background: #ffcc5c;
+  /* border-radius: 10%; */
+  /* text-emphasis-color: ; */
+}
+
+.row-center-by-me {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  padding-right: 40px;
+  padding-left: 190px;
+  font-size: x-small;
+}
+
+.nameatlaststyle {
+  padding-top: 2px;
+  text-align: right;
+  font-size: x-small;
+  color: black;
+}
+
+.password-message {
+  color: gray;
+  font-size: xx-small;
+}
+
+.user-message{
+  margin-top: 1%;
+  /* margin:auto; */
+  width:50%;
+  padding: 1rem;
+  border-radius: 3px;
+  border: 1px solid lightgreen;
+  background-color: lightgreen;
+}
+.user-message-error{
+color: red;
+  border-color: red;
+  background-color: rgb(225, 176, 176);
+}
+
+.error-style-by-me {
+  color: red;
+  text-decoration: underline;
+}

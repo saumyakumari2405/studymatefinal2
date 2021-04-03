@@ -1,0 +1,91 @@
+<%- include('partials/header') %>
+<center>
+
+
+
+  <div class="container mt-3">
+    <h1>Register</h1>
+    <% if (message1){ %>
+      <h4 class="error-style-by-me"> <%= message1 %></h4>
+      <% } %>
+
+
+      
+    <div class="column">  <!--Original class="row"-->
+     
+      <div class="col-sm-6"> <!--col-sm-8-->
+        <div class="card">
+          <div class="card-body">
+  
+            <!-- Makes POST request to /register route -->
+            <form action="/register" method="POST">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="username" placeholder="Enter Your Email Address" required>
+              </div>
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" class="form-control" name="fandnname" placeholder="Enter Your Full Name" required>
+              </div>
+              <div class="form-group">
+                <!-- <label for="password">Password</label>
+                
+                <input type="password" class="form-control" name="password" placeholder="Set a Password">
+                <input type="password" class="form-control" name="password"  pattern="(?=.\d)(?=.[a-z])(?=.[@$!%?&])(?=.*[A-Z]).{6,}"
+      title="Must contain at least one  number one uppercase ,one lowercase letter,one special character and at least 6 or more characters" placeholder="Set a Strong Password" required> -->
+      <label for="password" >Password</label><br />
+      <input type="password" name="password" class="form-control"  pattern=".{6,}"
+      title="Password should be greater than 6 characters" required>
+    <!-- </div> -->
+      
+      
+      <p class="password-message">Password must be greater than 4 and must include @,/,#,*,$</p>
+              </div>
+
+              <!-- <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                
+                <input type="password" class="form-control" name="cnfpassword" placeholder="Confirm Your Password">
+                <p class="password-message">Password must be greater than 4 and must include @,/,#,*,$</p>
+              </div> -->
+              
+              <button type="submit" class="btn btn-primary">Register</button>
+              
+               
+              <div class="row row-center-by-me">Already a User <a href="login">&nbsp Login</a></div>
+            </form>
+  
+          </div>
+        </div>
+      </div>
+    
+
+      
+       <div class="col-sm-5 tryingownstyle-space">  <!--col-sm-4-->
+        <div class="card social-block">
+          <div class="card-body">
+            <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
+              <i class="fab fa-google"></i>
+              <center>Sign Up with Google</center>
+            </a>
+          </div>
+          <div class="card-body">
+            <a class="btn btn-block btn-social btn-facebook" href="/auth/google" role="button">
+              <i class="fab fa-facebook"></i>
+             <center>Sign In with Facebook</center>
+            </a>
+          </div>
+        </div>
+      </div>
+
+  
+    </div>
+  </div>
+  
+
+
+
+</center>
+
+
+<%- include('partials/header') %>

@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <div class="jumbotron centered">
+    <!-- <i class="fas fa-key fa-6x"></i> -->
+    <h1 class="display-5">Study Mate</h1>
+    <p class="lead" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Alone we can do so little; Together we can do so much.</p>  <!--class="secret-text"-->
+
+    <form action="/submit" method="POST">
+
+      <div class="form-group">
+        <input type="text" class="form-control text-center" name="secret" placeholder="Ask Your Query">
+      </div>
+      <button type="submit" class="btn btn-primary">Post Question</button>
+    </form>
+
+
+  </div>
+</div>
+<%- include('partials/footer') %>
