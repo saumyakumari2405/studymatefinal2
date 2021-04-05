@@ -62,6 +62,7 @@ mongoose.set("useCreateIndex", true);
 
 const userSchema = new mongoose.Schema({
   username: String,
+  fandnname: String,
   password: String,
   googleId: String,
   secret: String
