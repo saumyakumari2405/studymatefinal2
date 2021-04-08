@@ -17,7 +17,7 @@ const sendgridTransport = require('nodemailer-sendgrid-transport');
 const transporter = nodemailer.createTransport(sendgridTransport({
   auth: {
 
-    api_key: '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'
+    api_key: ''
   }
 }));
 
@@ -191,7 +191,7 @@ app.post("/register", function(req, res){
         res.redirect("/secrets");
         await transporter.sendMail({
           to: user.username,
-          from: 'riya.rashi141@gmail.com',
+          from: 'saumyakumari6715@gmail.com',
           subject: 'Welcome to Study Mate',
           html: '<h1>Thank You for Signing Up with Study Mate</h1> <p>We look forward to Your Effective Utilization and Hardworking Contribution to the students society</p>'
         });
