@@ -17,7 +17,7 @@ const sendgridTransport = require('nodemailer-sendgrid-transport');
 const transporter = nodemailer.createTransport(sendgridTransport({
   auth: {
 
-    api_key: ''
+    api_key:'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'
   }
 }));
 
@@ -35,11 +35,29 @@ app.use(session({
 
 }));
 
+// Adding Cors Policy
+// Add headers
+app.use(function (req, res, next) {
+
+  // Website you wish to allow to connect
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+
+  // Request methods you wish to allow
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+  // Request headers you wish to allow
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+  // Set to true if you need the website to include cookies in the requests sent
+  // to the API (e.g. in case you use sessions)
+  res.setHeader('Access-Control-Allow-Credentials', true);
+
+  // Pass to next layer of middleware
+  next();
+});
 
 
-
-
-
+// Cors policy end
 
 
 app.use(passport.initialize());
@@ -189,9 +207,9 @@ app.post("/register", function(req, res){
     else {
       passport.authenticate("local")(req, res, async function(){
         res.redirect("/secrets");
-        await transporter.sendMail({
+        return transporter.sendMail({
           to: user.username,
-          from: 'saumyakumari6715@gmail.com',
+          from: 'saumyakumari6170@gmail.com',
           subject: 'Welcome to Study Mate',
           html: '<h1>Thank You for Signing Up with Study Mate</h1> <p>We look forward to Your Effective Utilization and Hardworking Contribution to the students society</p>'
         });
